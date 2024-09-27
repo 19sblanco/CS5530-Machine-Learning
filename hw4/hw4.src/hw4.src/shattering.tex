@@ -1,0 +1,18 @@
+\section{Shattering [15 points, for 6350 students]}
+\label{sec:shattering}
+
+Suppose we have a set $X_n$ consists of all binary sequences of a length $n$.
+For example, if $n=3$, the set would consist of the eight elements
+\texttt{\{000, 001, 010, 011, 100, 101, 110, 111\}}.
+
+Consider a set of functions $H_n$ that we will call the set of {\em
+  templates}. Each template is a sequence of length $n$ that is constructed
+using {\tt 0}, {\tt 1} or {\tt -} and returns $+1$ for input binary sequences
+that match it and $-1$ otherwise. While checking whether a template matches an
+input, a {\tt -} can match both a {\tt 0} and a {\tt 1}.
+
+For example, the template {\tt -10} matches the binary strings {\tt 010} and
+{\tt 110}, while {\tt -1-} matches all strings that have a {\tt 1} in the middle
+position, namely {\tt 010}, {\tt 011}, {\tt 110} and {\tt 111}.
+
+Does the set of templates $H_n$ shatter the set $X_n$? Prove your answer.

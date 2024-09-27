@@ -1,0 +1,47 @@
+\section{Extra Credit - Decision Lists [25 points]}
+In this problem, we are going to learn the class of $k$-decision
+lists. A decision list is an ordered sequence of if-then-else
+statements. The sequence of if-then-else conditions are tested in
+order, and the answer associated to the first satisfied condition is
+output. See Figure~\ref{fig:decision_list} for an example of a
+$2$-decision list.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=1.35in]{fig-1.pdf}
+\caption{A $2$-decision list.}
+\label{fig:decision_list}
+\end{center}
+\end{figure}
+
+A {\em $k$-decision list} over the variables $x_{1}, \ldots, x_{n}$ is
+an ordered sequence $L=(c_{1}, b_{1}), \ldots, (c_{l},b_{l})$ and a
+bit $b$, in which each $c_{i}$ is a conjunction of at most $k$
+literals over $x_{1},\ldots, x_{n}$. The bit $b$ is called the {\em
+  default} value, and $b_{i}$ is referred to as the bit {\em
+  associated} with condition $c_{i}$. For any input $x \in \{0,
+1\}^{n}$, $L(x)$ is defined to be the bit $b_{j}$, where $j$ is the
+smallest index satisfying $c_{j}(x)=1$; if no such index exists, then
+$L(x)=b$.
+
+We denote by $k\mbox{\em -DL}$ the class of concepts that can be
+represented by a $k$-decision list.
+
+
+\begin{enumerate}
+\item \relax[8 points] Show that if a concept $c$ can be represented
+  as a $k$-decision list so can its complement, $\neg c$. You can show
+  this by providing a $k$-decision list that represents $\neg c$,
+  given $c = \{(c_{1},b_{1}), \ldots, (c_{l},b_{l}),b)$.
+
+\item \relax[9 points] Use  Occam's Razor to show: \\
+  For any constant $k \geq 1$, the class of $k$-decision lists is
+  PAC-learnable.
+
+\item \relax[8 points] Show that $1$-decision lists are a linearly
+  separable functions. (Hint: Find a weight vector that will make the
+  same predictions a given $1$-decision list.)
+
+\end{enumerate}
+
+

@@ -1,0 +1,49 @@
+\section{VC Dimension [45 points]}
+\label{sec:vc-dimension}
+\begin{enumerate}
+\item ~[5 points] Assume that the three points below can be labeled in any way.  Show with pictures how they can be shattered by a linear classifier.  Use filled dots to represent positive classes and unfilled dots to represent negative classes.
+
+  \begin{tikzpicture}
+    \begin{axis}[my style, xtick={-1,0,...,3}, ytick={-1,0,...,3},
+      xmin=-1, xmax=3, ymin=-1, ymax=3]
+      \addplot[mark=*,only marks] coordinates {(2,2)(1,1)(1,2)};
+    \end{axis}
+  \end{tikzpicture}
+  
+\item {\bf VC-dimension of axis aligned rectangles in $\mathbb{R}^d$}:
+  Let $H^d_{rec}$ be the class of axis-aligned rectangles in
+  $\mathbb{R}^d$. When $d=2$, this class simply consists of rectangles
+  on the plane, and labels all points strictly outside the rectangle
+  as negative and all points on or inside the rectangle as positive.
+  In higher dimensions, this generalizes to $d$-dimensional boxes,
+  with points outside the box labeled negative.
+
+  \begin{enumerate}
+  \item ~[10 points] Show that the VC dimension of $H^2_{rec}$ is 4.
+  \item ~[10 points] Generalize your argument from the previous proof
+    to show that for $d$ dimensions, the VC dimension of $H^d_{rec}$
+    is $2d$.
+  \end{enumerate}
+  
+\item In the lectures, we considered the VC dimensions of infinite
+  concept classes. However, the same argument can be applied to finite
+  concept classes too. In this question, we will explore this setting.
+
+  \begin{enumerate}
+  \item ~[10 points] Show that for a finite hypothesis class
+    $\mathcal{C}$, its VC dimension can be at most
+    $\log_2\left(|\mathcal{C}|\right)$. (Hint: You can use
+    contradiction for this proof. But not necessarily!)
+
+  \item ~[5 points] Find an example of a class $\mathcal{C}$ of
+    functions over the real interval $X = [0,1]$ such that
+    $\mathcal{C}$ is an {\bf infinite} set, while its VC dimension is
+    exactly one.
+
+  \item ~[5 points] Give an example of a {\bf finite} class
+    $\mathcal{C}$ of functions over the same domain $X = [0,1]$ whose
+    VC dimension is exactly $\log_2(|\mathcal{C}|)$.
+
+  \end{enumerate}
+  
+\end{enumerate}
